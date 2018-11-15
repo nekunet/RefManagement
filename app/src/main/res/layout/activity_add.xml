@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/wood_back"
+    tools:context="jp.ac.shizuoka.inf.cs.cs14012.ref_management.Add"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="食品名"
+        android:id="@+id/name"
+        android:layout_marginTop="72dp"
+        android:textSize="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="個数"
+        android:id="@+id/number"
+        android:layout_below="@+id/name"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:textSize="22dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="期限"
+        android:id="@+id/deadline"
+        android:layout_marginTop="26dp"
+        android:textSize="19dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/editNumber"
+        android:layout_alignEnd="@+id/number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="アラーム"
+        android:id="@+id/alarm"
+        android:textSize="19dp"
+        android:layout_below="@+id/editDeadline"
+        android:layout_alignLeft="@+id/deadline"
+        android:layout_alignStart="@+id/deadline" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="メモ"
+        android:id="@+id/memo"
+        android:layout_below="@+id/alarm"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:textSize="22dp"
+        android:visibility="invisible" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:checked="true"
+        android:minWidth="23dp"
+        android:textSize="22dp"
+        android:layout_marginTop="-3dp"
+        android:minHeight="23dp"
+        android:layout_alignTop="@+id/alarm"
+        android:layout_toEndOf="@+id/alarm" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="15dp"
+        android:hint="食品名"
+        android:inputType="text" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="3"
+        android:id="@+id/editNumber"
+        android:layout_alignTop="@+id/number"
+        android:layout_alignParentStart="true"
+        android:hint="個数" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editDeadline"
+        android:layout_alignTop="@+id/deadline"
+        android:layout_alignParentStart="true"
+        android:hint="期限"
+        android:inputType="date" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_alignBottom="@+id/editDeadline"
+        android:layout_toEndOf="@+id/editDeadline"
+        android:visibility="gone" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BootstrapButton"
+        app:bootstrapBrand="success"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        app:bootstrapText=" {fa_calendar_check_o} "
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/editDeadline"
+        android:layout_toEndOf="@+id/editDeadline"
+        android:layout_alignTop="@+id/editDeadline"
+        android:id="@+id/datebutton" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BootstrapButton"
+        app:bootstrapBrand="info"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        app:bootstrapText="{fa_angle_left} 追加　　　"
+        android:id="@+id/ADDbutton" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BootstrapButton"
+        app:bootstrapBrand="danger"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        app:bootstrapText="削除 {fa_trash}"
+        android:id="@+id/DELETEbutton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BootstrapButton"
+        app:bootstrapBrand="danger"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        app:bootstrapText="キャンセル {fa_times}"
+        android:id="@+id/CANCELbutton"
+        android:layout_alignTop="@+id/DELETEbutton"
+        android:layout_alignStart="@+id/datebutton" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BootstrapButton"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true"
+        app:bootstrapText=" {fa_plus} "
+        android:id="@+id/PLUSbutton"
+        android:layout_above="@+id/deadline"
+        android:layout_centerHorizontal="true" />
+
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BootstrapButton"
+        app:buttonMode="regular"
+        app:showOutline="true"
+        app:roundedCorners="true"
+        app:bootstrapText=" {fa_minus} "
+        android:id="@+id/MINUSbutton"
+        android:layout_alignBottom="@+id/editNumber"
+        android:layout_alignLeft="@+id/checkBox"
+        android:layout_alignStart="@+id/checkBox" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/girl2"
+        android:scaleType="matrix"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/checkBox"
+        android:layout_alignTop="@+id/memo" />
+
+
+</RelativeLayout>

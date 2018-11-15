@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 押している時 -->
+    <item android:state_pressed="true">
+    <color android:color="#2980b9"/>
+
+    </item>
+    <!-- ボタンから指を離した時 -->
+    <item android:state_pressed="false">
+    <color android:color="#3498db"/>
+
+    </item>
+</selector>
